@@ -1,0 +1,167 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1410">
+  <meta name="description" content="Descubre y comparte perfiles en Steady EP. Evolution · Progress.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Steady EP | Evolution · Progress">
+  <meta property="og:description" content="Conecta y descubre perfiles en Steady EP.">
+  <meta property="og:url" content="https://davidsalazar0406-dev.github.io/steady-ep-links/">
+
+  <title>Steady EP | Compartir perfiles</title>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #09120e;
+      color: #f7fff9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at 50% 0%, #163d2b 0%, #09120e 55%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    main {
+      width: min(100%, 440px);
+      background: rgba(18, 32, 24, .92);
+      border: 1px solid #2b4939;
+      border-radius: 28px;
+      padding: 34px 26px;
+      text-align: center;
+      box-shadow: 0 20px 70px #0006;
+    }
+
+    .brand {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -.8px;
+    }
+
+    .brand span {
+      color: #35e68d;
+    }
+
+    .tag {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #9fb6a8;
+      margin: 5px 0 29px;
+    }
+
+    .avatar {
+      width: 106px;
+      height: 106px;
+      border-radius: 50%;
+      border: 3px solid #35e68d;
+      background: #213a2b;
+      margin: 0 auto 18px;
+      display: grid;
+      place-items: center;
+      font-size: 44px;
+      color: #b9edcf;
+    }
+
+    h1 {
+      font-size: 23px;
+      line-height: 1.3;
+      margin: 0 0 9px;
+    }
+
+    p {
+      color: #b6c7bc;
+      line-height: 1.6;
+      font-size: 15px;
+      margin: 0 0 23px;
+    }
+
+    .btn {
+      display: block;
+      background: #35e68d;
+      color: #06150c;
+      text-decoration: none;
+      padding: 15px 20px;
+      border-radius: 14px;
+      font-weight: 750;
+      margin-top: 16px;
+    }
+
+    .foot {
+      margin-top: 25px;
+      color: #91a89a;
+      font-size: 12px;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #9fb6a8;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="brand">Steady <span>EP</span></div>
+    <div class="tag">EVOLUTION · PROGRESS</div>
+
+    <div class="avatar" aria-hidden="true">↗</div>
+
+    <h1>Conecta en Steady EP</h1>
+
+    <p id="message">
+      Un espacio para compartir tu progreso,
+      descubrir personas y avanzar juntos.
+    </p>
+
+    <a
+      class="btn"
+      id="open"
+      href="https://davidsalazar0406-dev.github.io/steady-ep-links/"
+    >
+      Conocer Steady EP
+    </a>
+
+    <div class="note" id="notice">
+      Próximamente podrás abrir aquí los perfiles compartidos.
+    </div>
+
+    <div class="foot">
+      Steady EP · Evolution · Progress
+    </div>
+  </main>
+
+  <script>
+    // Página inicial de presentación.
+    // No consultar perfiles privados ni exponer claves de Supabase.
+
+    const params = new URLSearchParams(window.location.search);
+    const profileId = params.get("id");
+
+    if (profileId) {
+      document.getElementById("message").textContent =
+        "Recibiste un enlace de perfil de Steady EP. " +
+        "La apertura directa del perfil estará disponible " +
+        "cuando se conecte la aplicación.";
+
+      document.getElementById("notice").textContent =
+        "Enlace recibido. No se muestran datos del perfil " +
+        "hasta configurar el acceso público seguro.";
+    }
+  </script>
+</body>
+</html>
